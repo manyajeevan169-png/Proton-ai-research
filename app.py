@@ -8,7 +8,7 @@ wiki_wiki = wikipediaapi.Wikipedia('MyResearchApp/1.0', 'en')
 
 # Configure your AI API Key here
 # Replace "YOUR_API_KEY" with your actual Gemini API key
-GENAI_API_KEY = "AIzaSyC9746xKzxlWiTjeHSmLlfMVeaBjK0Rq7o" 
+GENAI_API_KEY = st.secrets["GENAI_API_KEY"]
 if GENAI_API_KEY != "YOUR_API_KEY":
     genai.configure(api_key=GENAI_API_KEY)
     model = genai.GenerativeModel('gemini-2.5-flash')
